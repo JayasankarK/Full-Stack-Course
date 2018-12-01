@@ -5,32 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="registerScripts.js">
+    </script>
 </head>
 <body style="background:#80aaff">
-    <table>
-        <tr>
-            <td>User Name :</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>Password :</td>
-            <td><input type="password"/></td>
-        </tr>
-        <tr>
-            <td>District :</td>
-            <td>
-                <select>
-                    <option>-Select-</option>
-                    <option>Ernakulam</option>
-                    <option>Alappuzha</option>
-                    <option>Kozhikode</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button style="background:#e6e600; height:30px">LOGIN</button></td>
-        </tr>
-    </table>
+    <form>
+        <table>
+            <tr>
+                <td>User Name :</td>
+                <td><input id="txtName" type="text" required onkeyup="validateLogin()"/></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input id="txtPwd" type="password" required onkeyup="validateLogin()"/></td>
+            </tr>
+            <tr>
+                <td>District :</td>
+                <td>
+                    <select id="ddlDistrict" onchange="validateLogin()"> 
+                        <option>-Select-</option>
+                        <option>Ernakulam</option>
+                        <option>Alappuzha</option>
+                        <option>Kozhikode</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="btnLogin" type="button" disabled onclick="readValues()">LOGIN</button></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
