@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularApp';
-  myName='Jayasankar';
+  myName='';
+  myRoll='';
   location:string='Kalady';
   status:boolean=false;
   count:number=0;
@@ -35,5 +37,11 @@ export class AppComponent {
   getStatus()
   {
     return this.status;
+  }
+
+  onSubmit(form:NgForm){
+    console.log(form.value);
+    this.myName=form.value.getName;
+    this.myRoll=form.value.getRoll;
   }
 }
