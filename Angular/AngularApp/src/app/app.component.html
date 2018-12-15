@@ -1,0 +1,7 @@
+<h1>My name is {{myName}}</h1>
+<h2>Location {{location}}</h2>
+<p>Status : {{getStatus()}}</p>
+<p [innerText]="myName"></p>
+<p>
+  <button [disabled]="!status" (click)="clickMe()">Save</button>
+</p>
