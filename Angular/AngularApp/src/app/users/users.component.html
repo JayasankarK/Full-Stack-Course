@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div *ngFor="let items of fetchData" style="padding-top:5px">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{items.username}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{items.name}}</h5>
+      <p class="card-text">Email {{items.email}}</p>
+      <div class="row">
+          <div class="col-sm-4"><p class="card-text">Address</p></div>
+          <div class="col-sm-8">
+              <p>{{items.address.street}}</p>
+              <p>{{items.address.suite}}</p>
+              <p>{{items.address.city}}</p>
+              <p>{{items.address.zipcode}}</p>
+          </div>
+        </div>
+      <!-- <div style="float:left"><p class="card-text">Address:</p></div>
+      <div style="float:right">
+        <p>{{items.address.street}}</p>
+        <p>{{items.address.suite}}</p>
+        <p>{{items.address.city}}</p>
+        <p>{{items.address.zipcode}}</p><br>
+      </div> -->
+        <p class="card-text">Phone {{items.phone}}</p>
+    </div>
+    </div>
+  </div>
+</div>
+
